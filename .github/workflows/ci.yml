@@ -15,9 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Setup Java and Scala
-        uses: olafurpg/setup-scala@v14
-        with:
-          java-version: openjdk@1.17.0
+        uses: coursier/setup-action@v3
+      - name: Setup SBT
+        uses: sbt/setup-sbt@v1
       - name: Setup Node
         uses: actions/setup-node@v7
         with:
@@ -25,7 +25,7 @@ jobs:
       - name: Setup Scala.js
         uses: japgolly/setup-scalajs@v1
       - name: Cache sbt
-        uses: coursier/cache-action@v7
+        uses: coursier/cache-action@v8
       - name: Install CIP-30 dependencies
         run: npm --prefix cardano-prism-cip30-webapp ci
       - name: Scalafmt
@@ -51,9 +51,9 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup Java and Scala
-        uses: olafurpg/setup-scala@v14
-        with:
-          java-version: openjdk@1.17.0
+        uses: coursier/setup-action@v3
+      - name: Setup SBT
+        uses: sbt/setup-sbt@v1
       - name: Setup Node
         uses: actions/setup-node@v7
         with:
@@ -61,7 +61,7 @@ jobs:
       - name: Setup Scala.js
         uses: japgolly/setup-scalajs@v1
       - name: Cache sbt
-        uses: coursier/cache-action@v7
+        uses: coursier/cache-action@v8
       - name: Publish
         run: sbt -v ci-release
         env:
