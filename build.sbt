@@ -22,7 +22,7 @@ inThisBuild(
   )
 )
 
-lazy val scalaDidVersion = "0.1.1"
+lazy val scalaDidVersion = "0.1.2"
 
 lazy val root = project
   .in(file("."))
