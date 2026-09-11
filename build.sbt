@@ -47,7 +47,7 @@ lazy val cardanoPrismCli = project
       "app.fmgp" %% "did-uniresolver" % scalaDidVersion,
       "dev.zio" %% "zio" % "2.1.26",
       "dev.zio" %% "zio-cli" % "0.8.2",
-      "dev.zio" %% "zio-http" % "3.11.4",
+      "dev.zio" %% "zio-http" % "3.11.5",
       "dev.zio" %% "zio-json" % "0.10.0",
       "org.reactivemongo" %% "reactivemongo" % "1.1.0-RC19",
     ),
