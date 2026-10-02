@@ -49,7 +49,7 @@ lazy val cardanoPrismCli = project
       "dev.zio" %% "zio-cli" % "0.8.2",
       "dev.zio" %% "zio-http" % "3.11.4",
       "dev.zio" %% "zio-json" % "0.10.0",
-      "org.reactivemongo" %% "reactivemongo" % "1.1.0-RC19",
+      "org.reactivemongo" %% "reactivemongo" % "1.1.0-pekko.noshaded.RC21",
     ),
     assembly / mainClass := Some("fmgp.did.method.prism.cli.PrismCli"),
     assembly / assemblyJarName := "cardano-prism.jar",
